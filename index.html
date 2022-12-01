@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Meu Contador</title>
+        <style>
+            *{
+           margin: 0;
+           box-sizing:border-box ;
+          }
+
+             body{
+                 min-height: 100vh;
+                 background-color:black;
+                 color: white;
+                 display:  grid;
+                 place-items: center;
+             }
+
+             section{
+                 background:rgba(255, 255, 255, 0.2);
+                 padding: 30px;
+                 border-radius: 5px;
+
+             }
+
+            p{
+                font-size: 100px;
+            }
+        
+        </style>
+    </head>
+
+    <body>
+       <section>
+        <h1>Contador</h1>
+        <p>0</p> 
+           
+        <button onclick="diminuir">menos</button>
+        <button onclick="aumentar">mais</button>
+       </section>
+
+       <script>
+          function diminuir (){
+          console.log("diminuir..")
+
+          }
+
+          function aumentar (){
+           console.log("aumentar...")
+
+          }
+
+       </script>
+    </body>
+</html>
