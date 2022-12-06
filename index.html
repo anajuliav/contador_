@@ -19,7 +19,7 @@
 
          section{
                  background:rgba(255, 255, 255, 0.2);
-                 padding: 30px;
+                 padding: 50px;
                  border-radius: 5px; 
                 }
 
@@ -32,18 +32,38 @@
    <body>
      <section>
         <h1>Contador</h1>
-        <p>0</p> 
+        <p></p> 
         <button onclick="diminuir()">menos</button>
         <button onclick="aumentar()">mais</button>
      </section>
        <script>
-          function diminuir() {
-          console.log('diminuir');
+
+         //estado da minha aplicação
+         let numero = 0
+
+         //alteradores de estados da aplicação 
+          function aumentar() {
+          numero++
+          mostrarNaTela()
+          
           }
 
-          function aumentar(){
-          console.log('aumentar');
+          function diminuir(){
+          numero--
+          mostrarNaTela()
+          
           }
+
+          //jogar o estado da aplicação na tela
+          function mostrarNaTela() {
+          const p = document.querySelector('p')
+          console.log('p')
+          p.innerText = numero
+
+          }
+
+          //iniciar
+          mostrarNaTela()
 
      </script>
   </body>
