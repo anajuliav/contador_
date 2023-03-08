@@ -3,68 +3,55 @@
   <head>
      <meta charset="utf-8">
      <title>Meu Contador</title>
-     <style>
-        *{
-           margin: 0;
-           box-sizing:border-box ;
-         }
-
-         body{
-             min-height: 100vh;
-             background-color:black;
-             color: white;
-             display:  grid;
-             place-items: center;
-             }
-
-         section{
-                 background:rgba(255, 255, 255, 0.2);
-                 padding: 50px;
-                 border-radius: 5px; 
-                }
-
-         p{
-           font-size: 100px;
-          }
-        
-     </style>
+     <link rel="stylesheet" href="style.css">
   </head>
-   <body>
+  <body>
      <section>
         <h1>Contador</h1>
-        <p></p> 
+        <p id="resultado"></p> 
         <button onclick="diminuir()">menos</button>
+        <button onclick="zerar()">zerar</button>
         <button onclick="aumentar()">mais</button>
+        <button onclick="dobrar()">Dobrar</button>
      </section>
-       <script>
+     <script>
+       //estado da minha aplicação
+       let numero = 0
 
-         //estado da minha aplicação
-         let numero = 0
+      //alteradores de estados da aplicação 
+        function aumentar() {
+        //numero = numero + 1
+        numero++
+        mostrarNaTela()
+        }
 
-         //alteradores de estados da aplicação 
-          function aumentar() {
-          numero++
-          mostrarNaTela()
+        function diminuir() {
+        //numero = numero - 1 
+        numero--
+        mostrarNaTela()
           
-          }
+        }
 
-          function diminuir(){
-          numero--
-          mostrarNaTela()
-          
-          }
+        function zerar() {
+        numero = 0
+        mostrarNaTela()
+        }
 
-          //jogar o estado da aplicação na tela
-          function mostrarNaTela() {
-          const p = document.querySelector('p')
-          console.log('p')
-          p.innerText = numero
+        function dobrar() {
+        numero = numero*2
+        mostrarNaTela()  
+        }
 
-          }
+        //jogar o estado da aplicação na tela
+        function mostrarNaTela() {
+        const p = document.querySelector('#resultado')
+        console.log('p')
+        p.innerText = numero
 
-          //iniciar
-          mostrarNaTela()
+        }
 
+        //iniciar
+        mostrarNaTela()
      </script>
   </body>
 </html>
