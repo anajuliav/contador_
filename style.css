@@ -1,6 +1,8 @@
 *{
     margin: 0;
     box-sizing:border-box;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   body{
@@ -10,33 +12,36 @@
       background-size: cover;
       background-repeat: no-repeat;
       color: white;
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(5px);
       display: grid;
       place-items: center;
       }
 
       section {
-        background-color: rgba(128, 128, 128, 0.7);
+        background-color: rgba(128, 128, 128, 0.9);
         border-radius: 30px;
-        padding: 30px;
+        padding: 60px;
         text-align: center;
       }
 
       h1 {
-        font-size: 30px;
-        margin-bottom: 10px;
+        font-size: 50px;
+        color: #424b54;
       }
-
+      
+      #resultado {
+        font-size: 100px;
+      }
+      
       button {
         border: none;
         border-radius: 10px;
         padding: 5px;
-        margin-top: 15px;
+        font-size: 15px;
+        width: 90px;
+        margin: 5px;
       }
-
-      #resultado {
-        font-size: 80px;
-      }
+   
 
 
 

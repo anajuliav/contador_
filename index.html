@@ -9,22 +9,20 @@
      <section>
         <h1>Contador</h1>
         <p id="resultado"></p> 
-        <button onclick="diminuir()">menos</button>
-        <button onclick="aumentar()">mais</button>
-        <button onclick="dobrar()">Dobrar</button>
+        <button onclick="diminuir()"><img src="img/menos.png" alt=""></button>
+        <button onclick="aumentar()"><img src="img/mais.png" alt=""></button>
         <div>
-         <button onclick="zerar()">zerar</button>   
+          <button onclick="dobrar()"><img src="img/dobrar.png" alt=""></button>   
+          <button onclick="zerar()"><img src="img/zerar.png" alt=""></button>
         </div>
-        
      </section>
-    
      <script>
        //estado da minha aplicação
        let numero = 0
 
       //alteradores de estados da aplicação 
-        function aumentar() {
-        //numero = numero + 1
+       function aumentar() {
+      //numero = numero + 1
         numero++
         mostrarNaTela()
         }
@@ -33,7 +31,6 @@
         //numero = numero - 1 
         numero--
         mostrarNaTela()
-          
         }
 
         function zerar() {
@@ -51,7 +48,6 @@
         const p = document.querySelector('#resultado')
         console.log('p')
         p.innerText = numero
-
         }
 
         //iniciar
